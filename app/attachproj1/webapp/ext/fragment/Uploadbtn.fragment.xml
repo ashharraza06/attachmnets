@@ -1,0 +1,24 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:unified="sap.ui.unified">
+    <Dialog title="Upload Bill" draggable="true" resizable="true">
+        <content>
+            <unified:FileUploader
+                core:require="{handler: 'attachproj1/ext/fragment/Upload'}"
+                id="fileUploader"
+                name="fileUploaderFS"
+                uploadUrl="upload/"
+                uploadComplete="{handler.handleUploadComplete}"
+                buttonText="Select File"
+                width="100%"/>
+        </content>
+        <buttons>
+            <Button text="Cancel" core:require="{handler: 'attachproj1/ext/fragment/Upload'}"
+             press="handler.onCancelPress" 
+                 />
+                 <Button text="Save" core:require="{handler: 'attachproj1/ext/fragment/Upload'}"
+             press="handler.onSavePress" 
+                 />
+
+        </buttons>
+        
+    </Dialog>
+</core:FragmentDefinition>
